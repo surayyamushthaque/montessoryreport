@@ -23,11 +23,11 @@
   align-items: center;
   margin-bottom: 20px;
   margin-top: 20px;
-  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .header img {
-  width: 250px;      /* adjust size */
+  width: 50px;      /* adjust size */
   height: auto;
   margin-right: 20px;
   border-radius: 10px; /* optional */
@@ -36,19 +36,37 @@
 .header-text {
   flex: 1;
   text-align: left; /* aligns text properly */
+  padding-bottom: 10;
+  
 }
+.header-text h1 {
+  display: flex;
+  align-items: center;   /* ensures vertical centering */
+              /* space between logo and text */
+  font-size: 3rem;       /* heading size */
+  padding-right: 20px;
+  margin-top:0px;
+}
+
+.header-text h1 img.logo {
+  height: 5em;           /* same height as heading text */
+  width: auto;           /* maintain aspect ratio */
+  padding-left: 90px;
+}
+
 
 
   h1, h2 {
     text-align: center;
     color: #2c3e50;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
   }
 
   p, a {
     text-align: center;
     color: #333;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
   }
 
   .section {
@@ -101,15 +119,18 @@
 <body>
 
 <div class="header">
-  <img src="ideal-removebg-preview.png" alt="School Logo">
   <div class="header-text">
-    <h1>PRIMARY MONTESSORI REPORT</h1>
+    <h1>
+      <img src="ideal-removebg-preview.png" alt="School Logo" class="logo">
+      PRIMARY MONTESSORI REPORT
+    </h1>
     <p>TO FOUNDER DIRECTOR - SEPTEMBER - 2025</p>
     <p>IDEAL ENGLISH SCHOOL, Affiliated to CBSE, New Delhi (Affiliation No: 930848)</p>
     <p>KADAKASSERY, AYANKALAM-PO, MALAPPURAM-DT, KERALA, PIN: 67957</p>
     <p>Phone: 0494-2687475, 2688575, 2686675 | Fax: 2686751 | www.idealeducation.org</p>
   </div>
 </div>
+
 
 
   <div class="section">
@@ -188,26 +209,34 @@
     </div>
   </div>
 
-  <div class="section">
-    <h2 onclick="toggleDetails('academic')">II. ACADEMIC EVALUATION</h2>
-    <div class="details" id="academic">
-      <ul>
-        <li>Academic Calendar</li>
-        <li>Students Attendance</li>
-        <li>Staff Attendance</li>
-        <li>Class Observation</li>
-        <li>Note Book Checking Chart</li>
-        <li>Monthly Syllabus & Portions</li>
-        <li>Weekly Subject Based Projects</li>
-        <li>Daily Basic / GK</li>
-        <li>Student of the month</li>
-        <li>Teacher of the month</li>
-        <li>Best Class of the month</li>
-        <li>Club & Activities</li>
-        <li>Slow Learners Academic Report</li>
-      </ul>
-    </div>
+ <div class="section">
+  <h2 onclick="toggleDetails('academic')">II. ACADEMIC EVALUATION</h2>
+  <div class="details" id="academic">
+    <ul>
+      <li>Academic Calendar</li>
+      <li>Students Attendance</li>
+      <li>Staff Attendance</li>
+      <li>Class Observation</li>
+      <li>Note Book Checking Chart</li>
+      <li>Monthly Syllabus & Portions</li>
+      <li>Weekly Subject Based Projects</li>
+
+      <!-- Added PDF link here -->
+      <li>
+        <a href="https://drive.google.com/file/d/1CisiqUiObL2knG7U7ghX67tZj6Fi2Upi/view?usp=drivesdk" 
+           target="_blank">
+          Daily Basic / GK
+        </a>
+      </li>
+
+      <li>Student of the month</li>
+      <li>Teacher of the month</li>
+      <li>Best Class of the month</li>
+      <li>Club & Activities</li>
+      <li>Slow Learners Academic Report</li>
+    </ul>
   </div>
+</div>
 
   <div class="section">
     <h2 onclick="toggleDetails('exams')">III. EXAMINATION & RESULTS</h2>
